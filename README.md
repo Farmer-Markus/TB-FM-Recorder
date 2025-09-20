@@ -1,5 +1,5 @@
 ### Technobase FM Recorder for Linux
-This project was created in around 2 days so the code is **trash**
+This project was created in around 2 days so the code is **trash!** <br>
 I think I will rewrite everything at given time but at least it should work.
 
 ## Compiling
