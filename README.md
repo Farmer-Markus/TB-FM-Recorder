@@ -19,3 +19,13 @@ You should be able to execute the program with a few command line arguments:
     --umin-time <time>     | Set minimum record time
     --umax-time <time>     | Set maximum record time
     --udj-change <dj-name> | Set name of dj to stop recording after 
+
+To change to one of the other stations search for these lines in the `main.cpp` file:
+
+        const char* url = "https://listener1.mp3.tb-group.fm/tb.mp3";
+        const char* apiUrl = "https://www.technobase.fm/index.php?option=com_broadcast&task=current.playhistory&format=json&station=technobase.fm";
+
+You can get the first url by going onto the tb website of your choice (example: trancebase.fm) and click on the `streams` tab. Then just copy the url of the first audio stream link and replace the old one in the file.
+To get the right songs you also need to change the link (only at the end at "station=technobase.fm") Just replace the technobase.fm with your wanted station (exambple "station=trancebase.fm") <br>
+You **will** need to compile the program again cuz I'm to lazy to create a command line option for choosing the station. <br>
+Maybe I'll do that when rewriting the recorder... Maybe
