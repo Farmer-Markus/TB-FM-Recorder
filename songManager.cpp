@@ -35,14 +35,17 @@ SongManager::~SongManager() {
 
 
 void SongManager::setDjCondition(const std::string dj) {
+    std::cout << "Set dj to:" << dj << "\n";
     djContition = dj;
 }
 
 void SongManager::setMinTimeCondition(const size_t minutes) {
+    std::cout << "Set MIN to:" << std::to_string(minutes) << "\n";
     minTimeCondition = minutes;
 }
 
 void SongManager::setMaxTimeCondition(const size_t minutes) {
+    std::cout << "Set MAX to:" << std::to_string(minutes) << "\n";
     maxTimeCondition = minutes;
 }
 
@@ -163,7 +166,7 @@ bool SongManager::update() {
     // Check conditions
     size_t timeRunning = Timer::steadyToMin(Timer::timeRunning);
     if(minTimeCondition < timeRunning) {
-        if(maxTimeCondition < timeRunning) {
+        if(maxTimeCondition > 0 && maxTimeCondition < timeRunning) {
             finished = true;
 
         } else if(m_json_old["data"]["liveBroadcast"]["nickName"].string() != djContition) {
