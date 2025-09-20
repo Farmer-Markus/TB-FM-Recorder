@@ -93,7 +93,7 @@ int main(int argc, char** argv) {
         if(aTime >= time) {
             if(!sngManager.update())
                 std::cout << "SongManager: Web request failed\n";
-            time = aTime + std::chrono::seconds(5);
+            time = aTime + std::chrono::seconds(10);
         }
 
         if(sngManager.finished)
