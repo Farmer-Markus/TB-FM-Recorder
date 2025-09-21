@@ -15,10 +15,11 @@ This should build the project
 ## Using
 You should be able to execute the program with a few command line arguments:
 
-    --help                 | Shows help menu
-    --umin-time <time>     | Set minimum record time
-    --umax-time <time>     | Set maximum record time
-    --udj-change <dj-name> | Set name of dj to stop recording after 
+    --help                 	| Shows help menu
+    --umin-time <time>     	| Set minimum record time
+    --umax-time <time>     	| Set maximum record time
+    --udj-change <dj-name> 	| Set name of dj to stop recording after 
+	--o	<path>				| Set output folder for audio/text files
 
 To change to one of the other stations search for these lines in the `main.cpp` file:
 
