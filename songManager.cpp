@@ -236,11 +236,11 @@ bool SongManager::update() {
             buildSongText(&finalText, js);
         }
 
+        if(!toFile(finalText.data(), finalText.size()))
+            return false;
+
         m_json_old = js;
     }
-
-    if(!toFile(finalText.data(), finalText.size()))
-        return false;
 
     return true;
 }

@@ -9,6 +9,12 @@
 #include "songManager.h"
 
 
+/*
+  TODO:
+    When selected dj is done, keep recording until song changes
+*/
+
+
 int main(int argc, char** argv) {
     // When server closes socket
     signal(SIGPIPE, SIG_IGN);
