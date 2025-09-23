@@ -221,8 +221,11 @@ bool SongManager::update() {
             try {
                 oldSng = m_json_old["data"]["title"].string();
                 newSng = js["data"]["title"].string();
+                std::cout << "Old: " << oldSng << " New: " << newSng << "\n"; 
                 if(oldSng != newSng)
                     songChange = true;
+                else
+                    songChange = false;
 
             } catch(std::out_of_range) {
                 songChange = true;
